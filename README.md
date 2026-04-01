@@ -1,13 +1,46 @@
-# Why Measuring Error Matters in Business Analytics and How to Do It
+# Why Measuring Error Matters in Business Analytics (and How to Do It)
 
-**Published:** 2025-05-12
-**Medium:** [https://medium.com/@kyle-t-jones/why-measuring-error-matters-in-business-analytics-and-how-to-do-it-2ef47d2d5dc1](https://medium.com/@kyle-t-jones/why-measuring-error-matters-in-business-analytics-and-how-to-do-it-2ef47d2d5dc1)
+This project demonstrates error measurement techniques for business analytics.
 
-## About
+## Article
 
-Place the code for this article in this repository.
-The original article export is saved as `article.md`.
+Medium article: [Why Measuring Error Matters in Business Analytics (and How to Do It)](https://medium.com/@kylejones_47003/why-measuring-error-matters-in-business-analytics-and-how-to-do-it-2ef47d2d5dc1)
 
-## Files
+## Project Structure
 
-Add your `.ipynb`, `.py`, `.yaml`, `.js`, `.ts`, or other project files here.
+```
+.
+├── README.md           # This file
+├── main.py            # Main entry point
+├── config.yaml        # Configuration file
+├── requirements.txt   # Python dependencies
+├── src/               # Core functions
+│   ├── core.py        # Error measurement functions
+│   └── plotting.py    # Tufte-style plotting utilities
+├── tests/             # Unit tests
+├── data/              # Data files
+└── images/            # Generated plots and figures
+```
+
+## Configuration
+
+Edit `config.yaml` to customize:
+- Data source or synthetic generation
+- Model noise level
+- Output settings
+
+## Error Metrics
+
+Comprehensive error measurement:
+- **MSE**: Mean Squared Error
+- **RMSE**: Root Mean Squared Error
+- **MAE**: Mean Absolute Error
+- **MAPE**: Mean Absolute Percentage Error
+- **R²**: Coefficient of Determination
+- **Mean/Std Error**: Error distribution
+
+## Caveats
+
+- By default, generates synthetic prediction data.
+- Error metrics should be interpreted in context.
+- MAPE may be undefined for zero actual values.
