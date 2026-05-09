@@ -25,7 +25,7 @@ def calculate_error_metrics(y_true: np.ndarray, y_pred: np.ndarray) -> Dict:
 
 def plot_error_analysis(y_true: np.ndarray, y_pred: np.ndarray, errors: np.ndarray,
                        title: str, output_path: Path):
- """Plot error analysis """
+    """Plot error analysis """
     fig, axes = plt.subplots(2, 1, figsize=(10, 10), sharex=True)
     
     axes[0].scatter(y_true, y_pred, alpha=0.6, color="#4A90A4", s=30, edgecolors='none')
