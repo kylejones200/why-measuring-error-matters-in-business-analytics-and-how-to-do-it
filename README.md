@@ -32,12 +32,12 @@ Edit `config.yaml` to customize:
 ## Error Metrics
 
 Comprehensive error measurement:
-- **MSE**: Mean Squared Error
-- **RMSE**: Root Mean Squared Error
-- **MAE**: Mean Absolute Error
-- **MAPE**: Mean Absolute Percentage Error
-- **R²**: Coefficient of Determination
-- **Mean/Std Error**: Error distribution
+- MSE: Mean Squared Error
+- RMSE: Root Mean Squared Error
+- MAE: Mean Absolute Error
+- MAPE: Mean Absolute Percentage Error
+- R²: Coefficient of Determination
+- Mean/Std Error: Error distribution
 
 ## Caveats
 
