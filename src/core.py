@@ -34,30 +34,32 @@ def plot_error_analysis(
     output_path: Path,
 ):
     """Plot error analysis"""
-    if plot:
-        fig, axes = plt.subplots(2, 1, figsize=(10, 10), sharex=True)
+    if not plot:
+        return
 
-        axes[0].scatter(
-            y_true, y_pred, alpha=0.6, color="#4A90A4", s=30, edgecolors="none"
-        )
-        min_val = min(y_true.min(), y_pred.min())
-        max_val = max(y_true.max(), y_pred.max())
-        axes[0].plot(
-            [min_val, max_val],
-            [min_val, max_val],
-            "r--",
-            linewidth=1.2,
-            label="Perfect Prediction",
-        )
-        axes[0].set_xlabel("Actual")
-        axes[0].set_ylabel("Predicted")
-        axes[0].legend(loc="best")
+    fig, axes = plt.subplots(2, 1, figsize=(10, 10), sharex=True)
 
-        axes[1].plot(errors, color="#D4A574", linewidth=1.2)
-        axes[1].axhline(0, color="black", linewidth=0.5, linestyle="-", alpha=0.3)
-        axes[1].set_xlabel("Index")
-        axes[1].set_ylabel("Error")
+    axes[0].scatter(
+        y_true, y_pred, alpha=0.6, color="#4A90A4", s=30, edgecolors="none"
+    )
+    min_val = min(y_true.min(), y_pred.min())
+    max_val = max(y_true.max(), y_pred.max())
+    axes[0].plot(
+        [min_val, max_val],
+        [min_val, max_val],
+        "r--",
+        linewidth=1.2,
+        label="Perfect Prediction",
+    )
+    axes[0].set_xlabel("Actual")
+    axes[0].set_ylabel("Predicted")
+    axes[0].legend(loc="best")
 
-        plt.tight_layout()
-        plt.savefig(output_path, dpi=100, bbox_inches="tight", facecolor="white")
-        plt.close()
+    axes[1].plot(errors, color="#D4A574", linewidth=1.2)
+    axes[1].axhline(0, color="black", linewidth=0.5, linestyle="-", alpha=0.3)
+    axes[1].set_xlabel("Index")
+    axes[1].set_ylabel("Error")
+
+    plt.tight_layout()
+    plt.savefig(output_path, dpi=100, bbox_inches="tight", facecolor="white")
+    plt.close()
