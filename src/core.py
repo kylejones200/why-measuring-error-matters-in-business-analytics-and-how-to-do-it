@@ -9,7 +9,7 @@ def calculate_error_metrics(y_true: np.ndarray, y_pred: np.ndarray) -> Dict:
     """Calculate comprehensive error metrics."""
     return {'mse': mean_squared_error(y_true, y_pred), 'rmse': np.sqrt(mean_squared_error(y_true, y_pred)), 'mae': mean_absolute_error(y_true, y_pred), 'mape': np.mean(np.abs((y_true - y_pred) / (y_true + 1e-10))) * 100, 'r2': r2_score(y_true, y_pred), 'mean_error': np.mean(y_true - y_pred), 'std_error': np.std(y_true - y_pred)}
 
-def plot_error_analysis(y_true: np.ndarray, y_pred: np.ndarray, errors: np.ndarray, title: str, output_path: Path, plot: bool = False):
+def plot_error_analysis(y_true: np.ndarray, y_pred: np.ndarray, errors: np.ndarray, title: str, output_path: Path, plot: bool=False):
     """Plot error analysis"""
     if not plot:
         return
