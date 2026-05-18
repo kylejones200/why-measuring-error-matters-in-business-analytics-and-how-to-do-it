@@ -2,6 +2,14 @@
 
 This project demonstrates error measurement techniques for business analytics.
 
+## Business context
+
+[["]T]ruth is much too complicated to allow anything but approximations." John von Neuman
+
+Business analytics supports decisions. It tells a sales manager what to expect next quarter. It shows a factory supervisor when output drops out of normal range. It flags a customer likely to churn. None of these are certainties. They are predictions under uncertainty. So error is baked into the job.
+
+Understanding error is not just about statistics. It's about impact. The kind of error you measure determines which decisions you trust. If you pick the wrong metric, you reward the wrong behavior. If you don't measure error at all, you can't improve.
+
 ## Article
 
 Medium article: [Why Measuring Error Matters in Business Analytics (and How to Do It)](https://medium.com/@kylejones_47003/why-measuring-error-matters-in-business-analytics-and-how-to-do-it-2ef47d2d5dc1)
